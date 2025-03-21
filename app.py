@@ -4,12 +4,12 @@ import joblib
 import numpy as np
 import nltk
 from pythainlp.tokenize import word_tokenize
+from embedding_utils import document_embedding
 
 nltk.download('punkt')
 
 # โหลดโมเดลและเวกเตอร์
 vectorizer_tf = joblib.load("vectorizer_tf.pkl")
-document_embedding = joblib.load("document_embedding.pkl")
 naive_model_tf_smote = joblib.load("naive_model_tf_smote.pkl")
 svm_model_smote_embedding = joblib.load("svm_model_smote_embedding.pkl")
 rf_model_rus_embedding = joblib.load("rf_model_rus_embedding.pkl")
